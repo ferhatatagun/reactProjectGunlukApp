@@ -11,20 +11,20 @@ import {Platform, StyleSheet, Text, View, AppRegistry} from 'react-native';
 import Header from '/src/components/Header';
 
 const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+  const { textStyle } = styles;
+  const { viewStyle } = styles;
+  const { textStyle2 } = styles;
+
+  ios: 'ios appGunluk',
+  android: 'appGunluk android' });
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <Header />
-
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Text style={styles.hi}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
+  hi: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
